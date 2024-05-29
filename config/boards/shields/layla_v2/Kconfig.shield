@@ -1,6 +1,3 @@
-# config SHIELD_LAYLA_V2
-#     def_bool $(shield_list_contains, layla_v2)
-
 config SHIELD_LAYLA_LEFT
     def_bool $(shields_list_contains,layla_left)
 
