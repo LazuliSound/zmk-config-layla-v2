@@ -3,9 +3,13 @@ id: layla
 name: Layla
 type: shield
 url: https://github.com/LazuliSound/zmk-config-layla-v2
-requires: [pro_micro]
+requires: 
+  - pro_micro
+exposes:
+  - i2c_oled
 features:
   - keys
+  - display
 siblings:
   - layla_left
   - layla_right
