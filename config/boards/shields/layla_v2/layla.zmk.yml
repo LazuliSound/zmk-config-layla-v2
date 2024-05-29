@@ -1,0 +1,11 @@
+file_format: "1"
+id: layla
+name: Layla
+type: shield
+url: https://github.com/LazuliSound/zmk-config-layla-v2
+requires: [pro_micro]
+features:
+  - keys
+siblings:
+  - layla_left
+  - layla_right
