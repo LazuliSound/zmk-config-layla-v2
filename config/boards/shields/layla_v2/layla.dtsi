@@ -32,7 +32,6 @@ RC(3,0) RC(3,1) RC(3,2) RC(3,3) RC(3,4) RC(3,5)                              RC(
 
 	kscan0: kscan {
 		compatible = "zmk,kscan-gpio-matrix";
-		label = "KSCAN";
 
 		diode-direction = "col2row";
 		row-gpios
@@ -46,16 +45,12 @@ RC(3,0) RC(3,1) RC(3,2) RC(3,3) RC(3,4) RC(3,5)                              RC(
 
 	left_encoder: encoder_left {
 		compatible = "alps,ec11";
-		label = "LEFT_ENCODER";
-		resolution = <4>;
 		a-gpios = <&pro_micro 16 (GPIO_ACTIVE_HIGH | GPIO_PULL_UP)>;
 		b-gpios = <&pro_micro 14 (GPIO_ACTIVE_HIGH | GPIO_PULL_UP)>;
 	};
 
 	right_encoder: encoder_right {
 		compatible = "alps,ec11";
-		label = "RIGHT_ENCODER";
-		resolution = <4>;
 		a-gpios = <&pro_micro 16 (GPIO_ACTIVE_HIGH | GPIO_PULL_UP)>;
 		b-gpios = <&pro_micro 14 (GPIO_ACTIVE_HIGH | GPIO_PULL_UP)>;
 	};
