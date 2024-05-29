@@ -43,7 +43,7 @@
     &kp ESC      &kp N1    &kp N2    &kp N3    &kp N4    &kp N5                  &kp N6    &kp N7    &kp N8    &kp N9    &kp N0    &kp GRAVE
     &kp TAB      &kp Q     &kp W     &kp E     &kp R     &kp T                   &kp Y     &kp U     &kp I     &kp O     &kp P     &kp BSPC
     &kp LSHFT    &kp A     &kp S     &kp D     &kp F     &kp G                   &kp H     &kp J     &kp K     &kp L     &kp SEMI  &kp SQT
-    &kp LCTRL    &kp Z     &kp X     &kp C     &kp V     &kp B                   &kp N     &kp M     &kp COMMA &kp DOT   &kp FSLH  &sk RSHFT
+    &kp LCTRL    &kp Z     &kp X     &kp C     &kp V     &kp B                   &kp N     &kp M     &kp COMMA &kp DOT   &kp FSLH  &kp RSHFT
                  &none     &kp LGUI  &kp SPACE &mo LOW   &kp LALT                &kp RALT  &mo HIGH  &kp ENTER &kp RGUI  &none
           >;
 
@@ -68,7 +68,7 @@
     &trans      &kp F1       &kp F2       &kp F3       &kp F4       &kp F5                  &kp F6       &kp F7       &kp F8       &kp F9       &kp F10      &kp F11
     &trans      &kp KP_LPAR  &kp AMPS     &kp ASTRK    &kp BSLH     &kp KP_RPAR             &kp COLON    &kp KP_N7    &kp KP_N8    &kp KP_N9    &kp KP_EQUAL &kp F12
     &trans      &kp LBRC     &kp DLLR     &kp PRCNT    &kp CARET    &kp RBRC                &kp SEMI     &kp KP_N4    &kp KP_N5    &kp KP_N6    &kp KP_MINUS &kp SQT
-    &trans      &kp LBKT     &kp EXCL     &kp AT       &kp HASH     &kp RBKT                &kp KP_N0    &kp KP_N1    &kp KP_N2    &kp KP_N3    &kp KP_PLUS  &sk RSHFT
+    &trans      &kp LBKT     &kp EXCL     &kp AT       &kp HASH     &kp RBKT                &kp KP_N0    &kp KP_N1    &kp KP_N2    &kp KP_N3    &kp KP_PLUS  &kp RSHFT
                 &trans       &trans       &trans       &trans       &trans                  &trans       &trans       &trans       &trans       &trans
           >;
 
@@ -93,7 +93,7 @@
     &trans      &trans       &trans       &trans       &trans       &trans                  &trans       &trans       &trans       &trans       &trans    &trans
     &trans      &none        &kp INS      &kp UP       &kp PSCRN    &none                   &none        &none        &kp PG_UP    &none        &none     &kp DEL
     &trans      &kp CAPS     &kp LEFT     &kp DOWN     &kp RIGHT    &none                   &none        &kp HOME     &kp PG_DN    &kp END      &none     &none
-    &trans      &none        &none        &none        &none        &none                   &none        &none        &none        &none        &none     &sk trans
+    &trans      &none        &none        &none        &none        &none                   &none        &none        &none        &none        &none     &trans
                 &trans       &trans       &trans       &trans       &trans                  &trans       &trans       &trans       &trans       &trans
           >;
 
