@@ -61,8 +61,8 @@
         jis_default_layer {
           bindings = <
     &kp ESC      &kp JP_N1   &kp JP_N2   &kp JP_N3   &kp JP_N4   &kp JP_N5                   &kp JP_N6   &kp JP_N7   &kp JP_N8   &kp JP_N9   &kp JP_N0   &kp JP_GRV
-    &kp TAB      &kp JP_Q    &kp JP_W    &kp JP_E    &kp JP_R    &kp JP_T                    &kp JP_Y    &kp JP_U    &kp JP_I    &kp JP_O    &kp JP_P    &kp JP_BSPC
-    &kp LSHFT    &kp JP_A    &kp JP_S    &kp JP_D    &kp JP_F    &kp JP_G                    &kp JP_H    &kp JP_J    &kp JP_K    &kp JP_L    &kp JP_SEMI &kp JP_QUOT
+    &kp TAB      &kp JP_Q    &kp JP_W    &kp JP_E    &kp JP_R    &kp JP_T                    &kp JP_Y    &kp JP_U    &kp JP_I    &kp JP_O    &kp JP_P    &kp BSPC
+    &kp LSHFT    &kp JP_A    &kp JP_S    &kp JP_D    &kp JP_F    &kp JP_G                    &kp JP_H    &kp JP_J    &kp JP_K    &kp JP_L    &kp JP_SCLN &kp JP_QUOT
     &kp LCTRL    &kp JP_Z    &kp JP_X    &kp JP_C    &kp JP_V    &kp JP_B                    &kp JP_N    &kp JP_M    &kp JP_COMM &kp JP_DOT  &kp JP_SLSH &kp RSHFT
               &soft_off      &kp LGUI    &kp SPACE   &mo JLOW    &kp LALT                  &kp RALT    &mo JHIGH   &kp ENTER   &kp RGUI    &soft_off
           >;
