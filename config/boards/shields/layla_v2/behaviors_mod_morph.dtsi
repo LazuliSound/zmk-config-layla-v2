@@ -1,0 +1,127 @@
+// Behaviors to support US like symbols when host layoust is SI
+
+// ; :
+jp_semi: jp-semicolon-colon {
+  compatible = "zmk,behavior-mod-morph";
+  label = "JP_SEMI_COLO";
+  #binding-cells = <0>;
+  bindings = <&kp JP_SCLN>, <&kp JP_COLN>;
+  mods = <(MOD_LSFT|MOD_RSFT)>;
+};
+
+// = +
+jp_equal: jp-equal-plus {
+  compatible = "zmk,behavior-mod-morph";
+  label = "JP_EQUAL_PLUS";
+  #binding-cells = <0>;
+  bindings = <&kp JP_EQL>, <&kp JP_PLUS>;
+  mods = <(MOD_LSFT|MOD_RSFT)>;
+};
+
+// ' "
+jp_sqt: jp-sqt-dqt {
+  compatible = "zmk,behavior-mod-morph";
+  label = "JP_SQT_DQT";
+  #binding-cells = <0>;
+  bindings = <&kp JP_QUOT>, <&kp JP_DQUO>;
+  mods = <(MOD_LSFT|MOD_RSFT)>;
+};
+
+// 2 @
+jp_n2: jp-2-at {
+  compatible = "zmk,behavior-mod-morph";
+  label = "JP_N2_AT";
+  #binding-cells = <0>;
+  bindings = <&kp JP_N2>, <&kp JP_AT>;
+  mods = <(MOD_LSFT|MOD_RSFT)>;
+};
+
+// 6 ^
+jp_n6: jp-6-caret {
+  compatible = "zmk,behavior-mod-morph";
+  label = "JP_N6_CARET";
+  #binding-cells = <0>;
+  bindings = <&kp JP_N6>, <&kp JP_CIRC>;
+  mods = <(MOD_LSFT|MOD_RSFT)>;
+};
+
+// 7 &
+jp_n7: jp-7-amps {
+  compatible = "zmk,behavior-mod-morph";
+  label = "JP_N7_AMPS";
+  #binding-cells = <0>;
+  bindings = <&kp JP_N7>, <&kp JP_AMPR>;
+  mods = <(MOD_LSFT|MOD_RSFT)>;
+};
+
+// 8 *
+jp_n8: jp-8-astrk {
+  compatible = "zmk,behavior-mod-morph";
+  label = "JP_N8_ASTRK";
+  #binding-cells = <0>;
+  bindings = <&kp JP_N8>, <&kp JP_ASTR>;
+  mods = <(MOD_LSFT|MOD_RSFT)>;
+};
+
+// 9 (
+jp_n9: jp-9-lpar {
+  compatible = "zmk,behavior-mod-morph";
+  label = "JP_N9_LPAR";
+  #binding-cells = <0>;
+  bindings = <&kp JP_N9>, <&kp JP_LPRN>;
+  mods = <(MOD_LSFT|MOD_RSFT)>;
+};
+
+// 0 )
+jp_n0: jp-0-rpar {
+  compatible = "zmk,behavior-mod-morph";
+  label = "JP_N0_RPAR";
+  #binding-cells = <0>;
+  bindings = <&kp JP_N0>, <&kp JP_RPRN>;
+  mods = <(MOD_LSFT|MOD_RSFT)>;
+};
+
+// - _
+jp_mins: jp-mins-unds {
+  compatible = "zmk,behavior-mod-morph";
+  label = "JP_MINS_UNDS";
+  #binding-cells = <0>;
+  bindings = <&kp JP_MINS>, <&kp JP_UNDS>;
+  mods = <(MOD_LSFT|MOD_RSFT)>;
+};
+
+// [ {
+jp_lbkt: jp-lbkt-lbrc {
+  compatible = "zmk,behavior-mod-morph";
+  label = "JP_LBKT_LBRC";
+  #binding-cells = <0>;
+  bindings = <&kp JP_LBRC>, <&kp JP_LCBR>;
+  mods = <(MOD_LSFT|MOD_RSFT)>;
+};
+
+// ] }
+jp_rbkt: jp-rbkt-rbrc {
+  compatible = "zmk,behavior-mod-morph";
+  label = "JP_RBKT_RBRC";
+  #binding-cells = <0>;
+  bindings = <&kp JP_RBRC>, <&kp JP_RCBR>;
+  mods = <(MOD_LSFT|MOD_RSFT)>;
+};
+
+// ` ~
+jp_grave: jp-grave-tilde {
+  compatible = "zmk,behavior-mod-morph";
+  label = "JP_GRAVE_TILDE_LIN";
+  #binding-cells = <0>;
+  bindings = <&kp JP_GRV>, <&kp JP_TILD>;
+  mods = <(MOD_LSFT|MOD_RSFT)>;
+};
+
+// \ |
+jp_bslh: jp-bslh-pipe {
+  compatible = "zmk,behavior-mod-morph";
+  label = "JP_BSLH_PIPE";
+  #binding-cells = <0>;
+  bindings = <&kp JP_BSLS>, <&kp JP_PIPE>;
+  mods = <(MOD_LSFT|MOD_RSFT)>;
+};
