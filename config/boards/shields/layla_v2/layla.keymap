@@ -60,9 +60,9 @@
         
         jis_default_layer {
           bindings = <
-    &kp ESC      &kp JP_N1   &kp JP_N2   &kp JP_N3   &kp JP_N4   &kp JP_N5                   &kp JP_N6   &kp JP_N7   &kp JP_N8   &kp JP_N9   &kp JP_N0   &kp JP_GRV
+    &kp ESC      &kp JP_N1   &jp_n2      &kp JP_N3   &kp JP_N4   &kp JP_N5                   &jp_n6      &jp_n7      &jp_n8      &jp_n9      &jp_n0      &jp_grave
     &kp TAB      &kp JP_Q    &kp JP_W    &kp JP_E    &kp JP_R    &kp JP_T                    &kp JP_Y    &kp JP_U    &kp JP_I    &kp JP_O    &kp JP_P    &kp BSPC
-    &kp LSHFT    &kp JP_A    &kp JP_S    &kp JP_D    &kp JP_F    &kp JP_G                    &kp JP_H    &kp JP_J    &kp JP_K    &kp JP_L    &kp JP_SCLN &kp JP_QUOT
+    &kp LSHFT    &kp JP_A    &kp JP_S    &kp JP_D    &kp JP_F    &kp JP_G                    &kp JP_H    &kp JP_J    &kp JP_K    &kp JP_L    &jp_semi    &jp_sqt
     &kp LCTRL    &kp JP_Z    &kp JP_X    &kp JP_C    &kp JP_V    &kp JP_B                    &kp JP_N    &kp JP_M    &kp JP_COMM &kp JP_DOT  &kp JP_SLSH &kp RSHFT
               &soft_off      &kp LGUI    &kp SPACE   &mo JLOW    &kp LALT                  &kp RALT    &mo JHIGH   &kp ENTER   &kp RGUI    &soft_off
           >;
@@ -86,7 +86,7 @@
         high_layer {
           bindings = <
     &trans      &kp F1       &kp F2       &kp F3       &kp F4       &kp F5                  &kp F6       &kp F7       &kp F8       &kp F9       &kp F10      &kp F11
-    &trans      &kp KP_LPAR  &kp AMPS     &kp ASTRK    &kp BSLH     &kp KP_RPAR             &kp COLON    &kp KP_N7    &kp KP_N8    &kp KP_N9    &kp EQUAL    &kp F12
+    &trans      &kp LPAR     &kp AMPS     &kp ASTRK    &kp BSLH     &kp RPAR                &kp COLON    &kp KP_N7    &kp KP_N8    &kp KP_N9    &kp EQUAL    &kp F12
     &trans      &kp LBRC     &kp DLLR     &kp PRCNT    &kp CARET    &kp RBRC                &kp SEMI     &kp KP_N4    &kp KP_N5    &kp KP_N6    &kp MINUS    &kp SQT
     &trans      &kp LBKT     &kp EXCL     &kp AT       &kp HASH     &kp RBKT                &kp KP_N0    &kp KP_N1    &kp KP_N2    &kp KP_N3    &kp PLUS     &kp RSHFT
                 &trans       &trans       &trans       &trans       &trans                  &trans       &trans       &trans       &trans       &trans
@@ -97,9 +97,9 @@
         jis_high_layer {
           bindings = <
     &trans      &kp F1       &kp F2       &kp F3       &kp F4       &kp F5                  &kp F6       &kp F7       &kp F8       &kp F9       &kp F10      &kp F11
-    &trans      &kp JP_LPRN  &kp JP_AMPR  &kp JP_ASTR  &kp JP_BSLS  &kp JP_RPRN             &kp JP_COLN  &kp KP_N7    &kp KP_N8    &kp KP_N9    &kp JP_EQL   &kp F12
-    &trans      &kp JP_LCBR  &kp JP_DLR   &kp JP_PERC  &kp JP_CIRC  &kp JP_RCBR             &kp JP_SCLN  &kp KP_N4    &kp KP_N5    &kp KP_N6    &kp JP_MINS  &kp JP_PIPE
-    &trans      &kp JP_LBRC  &kp JP_EXLM  &kp JP_AT    &kp JP_HASH  &kp JP_RBRC             &kp KP_N0    &kp KP_N1    &kp KP_N2    &kp KP_N3    &kp JP_PLUS  &kp RSHFT
+    &trans      &kp JP_LPRN  &kp JP_AMPR  &kp JP_ASTR  &jp_bslh     &kp JP_RPRN             &kp JP_COLN  &kp KP_N7    &kp KP_N8    &kp KP_N9    &jp_equal    &kp F12
+    &trans      &kp JP_LCBR  &kp JP_DLR   &kp JP_PERC  &kp JP_CIRC  &kp JP_RCBR             &kp JP_SCLN  &kp KP_N4    &kp KP_N5    &kp KP_N6    &jp_mins     &kp JP_PIPE
+    &trans      &jp_lbkt     &kp JP_EXLM  &kp JP_AT    &kp JP_HASH  &jp_rbkt                &kp KP_N0    &kp KP_N1    &kp KP_N2    &kp KP_N3    &kp JP_PLUS  &kp RSHFT
                 &trans       &trans       &trans       &trans       &trans                  &trans       &trans       &trans       &trans       &trans
           >;
 
