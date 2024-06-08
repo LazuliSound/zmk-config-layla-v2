@@ -187,9 +187,5 @@
             if-layers = <2 4>;
             then-layer = <6>;
         };
-        jis_tri_layer {
-            if-layers = <3 5>;
-            then-layer = <7>;
-        };
     };
 };
