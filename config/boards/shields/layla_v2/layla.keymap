@@ -60,11 +60,11 @@
         
         jis_default_layer {
           bindings = <
-    &kp ESC      &kp JP_N1   &kp JP_N2   &kp JP_N3   &kp JP_N4   &kp JP_N5                   &kp JP_N6   &kp JP_N7   &kp JP_N8   &kp JP_N9   &kp JP_N0   &kp JP_GRV
-    &kp TAB      &kp JP_Q    &kp JP_W    &kp JP_E    &kp JP_R    &kp JP_T                    &kp JP_Y    &kp JP_U    &kp JP_I    &kp JP_O    &kp JP_P    &kp BSPC
-    &kp LSHFT    &kp JP_A    &kp JP_S    &kp JP_D    &kp JP_F    &kp JP_G                    &kp JP_H    &kp JP_J    &kp JP_K    &kp JP_L    &kp JP_SCLN &kp JP_QUOT
-    &kp LCTRL    &kp JP_Z    &kp JP_X    &kp JP_C    &kp JP_V    &kp JP_B                    &kp JP_N    &kp JP_M    &kp JP_COMM &kp JP_DOT  &kp JP_SLSH &kp RSHFT
-              &soft_off      &kp LGUI    &kp SPACE   &mo JLOW    &kp LALT                  &kp RALT    &mo JHIGH   &kp ENTER   &kp RGUI    &soft_off
+    &kp ESC      &kp N1    &kp N2    &kp N3    &kp N4    &kp N5                  &kp N6    &kp N7    &kp N8    &kp N9    &kp N0    &kp GRAVE
+    &kp TAB      &kp Q     &kp W     &kp E     &kp R     &kp T                   &kp Y     &kp U     &kp I     &kp O     &kp P     &kp BSPC
+    &kp LSHFT    &kp A     &kp S     &kp D     &kp F     &kp G                   &kp H     &kp J     &kp K     &kp L     &kp SEMI  &kp SQT
+    &kp LCTRL    &kp Z     &kp X     &kp C     &kp V     &kp B                   &kp N     &kp M     &kp COMMA &kp DOT   &kp FSLH  &kp RSHFT
+            &soft_off      &kp LGUI  &kp SPACE &mo LOW   &kp LALT                &kp RALT  &mo HIGH  &kp ENTER &kp RGUI  &soft_off
           >;
 
           sensor-bindings = <&inc_dec_kp LEFT RIGHT>;
