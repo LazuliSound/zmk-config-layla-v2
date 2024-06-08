@@ -64,32 +64,32 @@
 #define JP_COMM COMMA // ,
 #define JP_DOT  DOT   // .
 #define JP_SLSH FSLH  // /
-#define JP_BSLS INT1 // (backslash)
-#define JP_MHEN INT5 // Muhenkan (無変換)
-#define JP_HENK INT4 // Henkan (変換)
-#define JP_KANA INT2 // Katakana ↔ Hiragana ↔ Rōmaji (カタカナ ↔ ひらがな ↔ ローマ字)
+#define JP_BSLS INT1  // (backslash)
+#define JP_MHEN INT5  // Muhenkan (無変換)
+#define JP_HENK INT4  // Henkan (変換)
+#define JP_KANA INT2  // Katakana ↔ Hiragana ↔ Rōmaji (カタカナ ↔ ひらがな ↔ ローマ字)
 
 // Row 1
-#define JP_EXLM S(JP_N1)     // !
-#define JP_DQUO S(JP_N2)     // "
-#define JP_HASH S(JP_N3)     // #
-#define JP_DLR  S(JP_N4)     // $
-#define JP_PERC S(JP_N5)     // %
-#define JP_AMPR S(JP_N6)     // &
-#define JP_QUOT S(JP_N7)     // '
-#define JP_LPRN S(JP_N8)     // (
-#define JP_RPRN S(JP_N9)     // )
-#define JP_EQL  S(JP_MINS)   // =
-#define JP_TILD S(JP_CIRC)   // ~
-#define JP_PIPE S(JP_YEN)    // |
+#define JP_EXLM LS(JP_N1)     // !
+#define JP_DQUO LS(JP_N2)     // "
+#define JP_HASH LS(JP_N3)     // #
+#define JP_DLR  LS(JP_N4)     // $
+#define JP_PERC LS(JP_N5)     // %
+#define JP_AMPR LS(JP_N6)     // &
+#define JP_QUOT LS(JP_N7)     // '
+#define JP_LPRN LS(JP_N8)     // (
+#define JP_RPRN LS(JP_N9)     // )
+#define JP_EQL  LS(JP_MINS)   // =
+#define JP_TILD LS(JP_CIRC)   // ~
+#define JP_PIPE LS(JP_YEN)    // |
 // Row 4
-#define JP_GRV  S(JP_AT)      // `
-#define JP_LCBR S(JP_LBRC)    // {
-#define JP_CAPS S(JP_EISU)    // Caps Lock
-#define JP_PLUS S(JP_SCLN)    // +
-#define JP_ASTR S(JP_COLN)    // *
-#define JP_RCBR S(JP_RBRC)    // }
-#define JP_LABK S(JP_COMM)    // <
-#define JP_RABK S(JP_DOT)     // >
-#define JP_QUES S(JP_SLSH)    // ?
-#define JP_UNDS S(JP_BSLS)    // _
+#define JP_GRV  LS(JP_AT)      // `
+#define JP_LCBR LS(JP_LBRC)    // {
+#define JP_CAPS LS(JP_EISU)    // Caps Lock
+#define JP_PLUS LS(JP_SCLN)    // +
+#define JP_ASTR LS(JP_COLN)    // *
+#define JP_RCBR LS(JP_RBRC)    // }
+#define JP_LABK LS(JP_COMM)    // <
+#define JP_RABK LS(JP_DOT)     // >
+#define JP_QUES LS(JP_SLSH)    // ?
+#define JP_UNDS LS(JP_BSLS)    // _
