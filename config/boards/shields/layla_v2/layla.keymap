@@ -60,11 +60,11 @@
         
         jis_default_layer {
           bindings = <
-    &kp ESC      &kp N1    &kp N2    &kp N3    &kp N4    &kp N5                  &kp N6    &kp N7    &kp N8    &kp N9    &kp N0    &kp GRAVE
-    &kp TAB      &kp Q     &kp W     &kp E     &kp R     &kp T                   &kp Y     &kp U     &kp I     &kp O     &kp P     &kp BSPC
-    &kp LSHFT    &kp A     &kp S     &kp D     &kp F     &kp G                   &kp H     &kp J     &kp K     &kp L     &kp SEMI  &kp SQT
-    &kp LCTRL    &kp Z     &kp X     &kp C     &kp V     &kp B                   &kp N     &kp M     &kp COMMA &kp DOT   &kp FSLH  &kp RSHFT
-            &soft_off      &kp LGUI  &kp SPACE &mo LOW   &kp LALT                &kp RALT  &mo HIGH  &kp ENTER &kp RGUI  &soft_off
+    &kp ESC      &kp JP_N1   &kp JP_N2   &kp JP_N3   &kp JP_N4   &kp JP_N5                   &kp JP_N6   &kp JP_N7   &kp JP_N8   &kp JP_N9   &kp JP_N0   &kp JP_GRV
+    &kp TAB      &kp JP_Q    &kp JP_W    &kp JP_E    &kp JP_R    &kp JP_T                    &kp JP_Y    &kp JP_U    &kp JP_I    &kp JP_O    &kp JP_P    &kp BSPC
+    &kp LSHFT    &kp JP_A    &kp JP_S    &kp JP_D    &kp JP_F    &kp JP_G                    &kp JP_H    &kp JP_J    &kp JP_K    &kp JP_L    &kp JP_SCLN &kp JP_QUOT
+    &kp LCTRL    &kp JP_Z    &kp JP_X    &kp JP_C    &kp JP_V    &kp JP_B                    &kp JP_N    &kp JP_M    &kp JP_COMM &kp JP_DOT  &kp JP_SLSH &kp RSHFT
+              &soft_off      &kp LGUI    &kp SPACE   &mo JLOW    &kp LALT                  &kp RALT    &mo JHIGH   &kp ENTER   &kp RGUI    &soft_off
           >;
 
           sensor-bindings = <&inc_dec_kp LEFT RIGHT>;
@@ -97,9 +97,9 @@
         jis_high_layer {
           bindings = <
     &trans      &kp F1       &kp F2       &kp F3       &kp F4       &kp F5                  &kp F6       &kp F7       &kp F8       &kp F9       &kp F10      &kp F11
-    &trans      &kp KP_LPAR  &kp AMPS     &kp ASTRK    &kp BSLH     &kp KP_RPAR             &kp COLON    &kp KP_N7    &kp KP_N8    &kp KP_N9    &kp EQUAL    &kp F12
-    &trans      &kp LBRC     &kp DLLR     &kp PRCNT    &kp CARET    &kp RBRC                &kp SEMI     &kp KP_N4    &kp KP_N5    &kp KP_N6    &kp MINUS    &kp SQT
-    &trans      &kp LBKT     &kp EXCL     &kp AT       &kp HASH     &kp RBKT                &kp KP_N0    &kp KP_N1    &kp KP_N2    &kp KP_N3    &kp PLUS     &kp RSHFT
+    &trans      &kp JP_LPRN  &kp JP_AMPR  &kp JP_ASTR  &kp JP_BSLS  &kp JP_RPRN             &kp JP_COLN  &kp KP_N7    &kp KP_N8    &kp KP_N9    &kp JP_EQL   &kp F12
+    &trans      &kp JP_LCBR  &kp JP_DLR   &kp JP_PERC  &kp JP_CIRC  &kp JP_RCBR             &kp JP_SCLN  &kp KP_N4    &kp KP_N5    &kp KP_N6    &kp JP_MINS  &kp JP_PIPE
+    &trans      &kp JP_LBRC  &kp JP_EXLM  &kp JP_AT    &kp JP_HASH  &kp JP_RBRC             &kp KP_N0    &kp KP_N1    &kp KP_N2    &kp KP_N3    &kp JP_PLUS  &kp RSHFT
                 &trans       &trans       &trans       &trans       &trans                  &trans       &trans       &trans       &trans       &trans
           >;
 
@@ -159,7 +159,7 @@
           bindings = <
     &sys_reset  &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3 &bt BT_SEL 4            &none        &none        &none        &none        &none     &sys_reset
     &bootloader &bt BT_CLR   &none        &none        &none        &none                   &none        &kp C_VOL_DN &kp C_MUTE   &kp C_VOL_UP &none     &bootloader
-    &none       &none        &none        &none        &none        &none                   &none        &kp C_PREV   &kp C_PP     &kp C_NEXT   &none     &none
+   &to JDEFAULT &none        &none        &none        &none        &none                   &none        &kp C_PREV   &kp C_PP     &kp C_NEXT   &none     &none
     &kp LNLCK   &none        &none        &none        &none        &none                   &none        &none        &none        &none        &none     &none
                 &trans       &trans       &trans       &trans       &trans                  &trans       &trans       &trans       &trans       &trans
           >;
@@ -170,7 +170,7 @@
           bindings = <
     &sys_reset  &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3 &bt BT_SEL 4            &none        &none        &none        &none        &none     &sys_reset
     &bootloader &bt BT_CLR   &none        &none        &none        &none                   &none        &kp C_VOL_DN &kp C_MUTE   &kp C_VOL_UP &none     &bootloader
-    &none       &none        &none        &none        &none        &none                   &none        &kp C_PREV   &kp C_PP     &kp C_NEXT   &none     &none
+    &to DEFAULT &none        &none        &none        &none        &none                   &none        &kp C_PREV   &kp C_PP     &kp C_NEXT   &none     &none
     &kp LNLCK   &none        &none        &none        &none        &none                   &none        &none        &none        &none        &none     &none
                 &trans       &trans       &trans       &trans       &trans                  &trans       &trans       &trans       &trans       &trans
           >;
@@ -186,6 +186,10 @@
         tri_layer {
             if-layers = <2 4>;
             then-layer = <6>;
+        };
+        jis_tri_layer {
+            if-layers = <3 5>;
+            then-layer = <7>;
         };
     };
 };
