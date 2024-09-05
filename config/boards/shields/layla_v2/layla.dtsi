@@ -48,14 +48,14 @@ RC(3,0) RC(3,1) RC(3,2) RC(3,3) RC(3,4) RC(3,5)    RC(4,0)        RC(4,11)   RC(
 		compatible = "alps,ec11";
 		a-gpios = <&pro_micro 14 (GPIO_ACTIVE_HIGH | GPIO_PULL_UP)>;
 		b-gpios = <&pro_micro 16 (GPIO_ACTIVE_HIGH | GPIO_PULL_UP)>;
-        steps = <22>;
+        steps = <90>;
 	};
 
 	right_encoder: encoder_right {
 		compatible = "alps,ec11";
 		a-gpios = <&pro_micro 14 (GPIO_ACTIVE_HIGH | GPIO_PULL_UP)>;
 		b-gpios = <&pro_micro 16 (GPIO_ACTIVE_HIGH | GPIO_PULL_UP)>;
-        steps = <22>;
+        steps = <90>;
 	};
 
 	sensors {
