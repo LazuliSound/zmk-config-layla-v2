@@ -15,10 +15,13 @@ if SHIELD_LAYLA_LEFT || SHIELD_LAYLA_RIGHT
         default y
 
 
-if ZMK_DISPLAY
+if ZMK_DISPLAY || ZMK_POINTING
 
     config I2C
         default y
+endif # ZMK_DISPLAY || ZMK_POINTING
+
+if ZMK_DISPLAY
 
     config SSD1306
         default y

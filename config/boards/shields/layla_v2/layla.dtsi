@@ -64,6 +64,15 @@ RC(3,0) RC(3,1) RC(3,2) RC(3,3) RC(3,4) RC(3,5)    RC(4,0)        RC(4,11)   RC(
         triggers-per-rotation = <18>;
 	};
 
+	split_inputs {
+        #address-cells = <1>;
+        #size-cells = <0>;
+
+        glidepoint_split: glidepoint_split@2a {
+            compatible = "zmk,input-split";
+            reg = <2a>;
+        };
+    };
 };
 
 &pro_micro_i2c {
@@ -84,4 +93,21 @@ RC(3,0) RC(3,1) RC(3,2) RC(3,3) RC(3,4) RC(3,5)    RC(4,0)        RC(4,11)   RC(
         inversion-on;
         prechargep = <0x22>;
     };
+	
+    glidepoint: glidepoint@2a {
+        compatible = "cirque,pinnacle";
+        reg = <0x2a>;
+        status = "okay";
+        dr-gpios = <&pro_micro 1 (GPIO_ACTIVE_HIGH)>; // DR pin on cirque is always &vik_conn 5
+
+        sensitivity = "4x";
+        sleep;
+    };
+};
+
+&glidepoint_split {
+    device = <&glidepoint>;
+
+    // Optional
+    input-processors = <&zip_xy_transform (INPUT_TRANSFORM_XY_SWAP | INPUT_TRANSFORM_X_INVERT | INPUT_TRANSFORM_Y_INVERT)>;
 };

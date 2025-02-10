@@ -185,6 +185,13 @@
   };
   
   / {
+    glidepoint_listener {
+        compatible = "zmk,input-listener";
+        device = <&glidepoint>;
+    };
+};
+
+  / {
     conditional_layers {
         compatible = "zmk,conditional-layers";
         tri_layer {
