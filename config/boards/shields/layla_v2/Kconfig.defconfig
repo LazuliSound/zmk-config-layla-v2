@@ -13,6 +13,9 @@ if SHIELD_LAYLA_LEFT || SHIELD_LAYLA_RIGHT
 
     config ZMK_SPLIT
         default y
+        
+    config ZMK_POINTING
+        default y
 
 
 if ZMK_DISPLAY || ZMK_POINTING
