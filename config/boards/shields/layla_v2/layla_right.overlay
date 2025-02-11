@@ -20,21 +20,10 @@
     status = "okay";
 };
 
-
-&pro_micro_i2c {
+&glidepoint {
     status = "okay";
-	
-    glidepoint: glidepoint@2a {
-        compatible = "cirque,pinnacle";
-        reg = <0x2a>;
-        status = "okay";
-        dr-gpios = <&pro_micro 1 (GPIO_ACTIVE_HIGH)>; // DR pin on cirque is always &vik_conn 5
-
-        sensitivity = "4x";
-        sleep;
-    };
 };
 
-&glidepoint_split {
-    device = <&glidepoint>;
+&glidepoint_listener {
+    status = "okay";
 };
