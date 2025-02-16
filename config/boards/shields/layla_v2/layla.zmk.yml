@@ -10,6 +10,7 @@ exposes:
 features:
   - keys
   - display
+  - pointer
 siblings:
   - layla_left
   - layla_right

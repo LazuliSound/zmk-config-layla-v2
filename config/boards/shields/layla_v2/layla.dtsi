@@ -48,27 +48,27 @@ RC(3,0) RC(3,1) RC(3,2) RC(3,3) RC(3,4) RC(3,5)    RC(4,0)        RC(4,11)   RC(
 		compatible = "alps,ec11";
 		a-gpios = <&pro_micro 14 (GPIO_ACTIVE_HIGH | GPIO_PULL_UP)>;
 		b-gpios = <&pro_micro 16 (GPIO_ACTIVE_HIGH | GPIO_PULL_UP)>;
-        steps = <90>;
+        steps = <80>;
 	};
 
 	right_encoder: encoder_right {
 		compatible = "alps,ec11";
 		a-gpios = <&pro_micro 14 (GPIO_ACTIVE_HIGH | GPIO_PULL_UP)>;
 		b-gpios = <&pro_micro 16 (GPIO_ACTIVE_HIGH | GPIO_PULL_UP)>;
-        steps = <90>;
+        steps = <80>;
 	};
 
 	sensors {
 		compatible = "zmk,keymap-sensors";
 		sensors = <&left_encoder &right_encoder>;
-        triggers-per-rotation = <18>;
+        triggers-per-rotation = <20>;
 	};
 
 	glidepoint_listener: glidepoint_listener {
-		compatible = "zmk,input-listener";
-		status = "disabled";
-		device = <&glidepoint>;
-	};
+        compatible = "zmk,input-listener";
+        status = "disabled";
+        device = <&glidepoint>;
+    };
 };
 
 &pro_micro_i2c {
@@ -95,8 +95,9 @@ RC(3,0) RC(3,1) RC(3,2) RC(3,3) RC(3,4) RC(3,5)    RC(4,0)        RC(4,11)   RC(
         reg = <0x2a>;
         status = "okay";
         dr-gpios = <&pro_micro 1 (GPIO_ACTIVE_HIGH)>;
-
-        sensitivity = "4x";
+        sensitivity = "2x";
         sleep;
+        //no-taps;
+        y-invert;
     };
 };
