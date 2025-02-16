@@ -33,13 +33,6 @@
   hold-time-ms = <2000>; // Only turn off it the key is held for 2 seconds or longer.
 };
 
-&glidepoint_listener {
-    scroller {
-        layers = <LOW>;
-        input-processors = <&zip_xy_to_scroll_mapper>, <&zip_scroll_scaler 1 5>;
-    };
-};
-
 / {
   behaviors {
       #include "behaviors_mod_morph.dtsi"
