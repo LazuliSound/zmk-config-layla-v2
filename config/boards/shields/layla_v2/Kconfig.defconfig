@@ -1,10 +1,13 @@
-if SHIELD_LAYLA_RIGHT
+if SHIELD_LAYLA_LEFT
 
 config ZMK_KEYBOARD_NAME
     default "LaylaV2"
 
 config ZMK_SPLIT_ROLE_CENTRAL
     default y
+endif # LEFT
+
+if SHIELD_LAYLA_RIGHT
 
 config ZMK_POINTING
     default y
