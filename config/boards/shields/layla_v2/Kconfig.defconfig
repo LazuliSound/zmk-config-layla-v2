@@ -1,39 +1,14 @@
 if SHIELD_LAYLA_LEFT
 
-    config ZMK_KEYBOARD_NAME
-        default "LaylaV2"
+config ZMK_KEYBOARD_NAME
+    default "LaylaV2"
 
-    config ZMK_SPLIT_BLE_ROLE_CENTRAL
-        default y
-
-endif # LEFT
-
-
-if SHIELD_LAYLA_LEFT || SHIELD_LAYLA_RIGHT
-
-    config ZMK_SPLIT
-        default y
+config ZMK_SPLIT_ROLE_CENTRAL
+    default y
+    
+config SSD1306
+    default y
         
-if SHIELD_LAYLA_RIGHT
-
-    config ZMK_POINTING
-        default y
-
-endif # RIGHT
-
-if ZMK_DISPLAY || ZMK_POINTING
-
-    config I2C
-        default y
-endif # ZMK_DISPLAY || ZMK_POINTING
-
-if ZMK_DISPLAY
-
-    config SSD1306
-        default y
-
-endif # ZMK_DISPLAY
-
 if LVGL
 
 config LV_Z_VDB_SIZE
@@ -50,5 +25,22 @@ choice LV_COLOR_DEPTH
 endchoice
 
 endif # LVGL
+
+endif # LEFT
+
+if SHIELD_LAYLA_RIGHT
+
+config ZMK_POINTING
+    default y
+    
+config I2C
+    default y
+
+endif # LEFT
+
+if SHIELD_LAYLA_LEFT || SHIELD_LAYLA_RIGHT
+
+config ZMK_SPLIT
+    default y
 
 endif # LEFT RIGHT
