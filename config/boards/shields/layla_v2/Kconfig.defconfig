@@ -7,13 +7,6 @@ config ZMK_SPLIT_ROLE_CENTRAL
     default y
 endif # LEFT
 
-if SHIELD_LAYLA_RIGHT
-
-config ZMK_POINTING
-    default y
-
-endif # RIGHT
-
 if SHIELD_LAYLA_LEFT || SHIELD_LAYLA_RIGHT
 
 config ZMK_SPLIT
@@ -41,5 +34,8 @@ choice LV_COLOR_DEPTH
 endchoice
 
 endif # LVGL
+
+config ZMK_POINTING
+    default y
 
 endif # LEFT RIGHT
