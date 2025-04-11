@@ -34,7 +34,6 @@
         #include "behaviors_mod_morph.dtsi"
     };
 
-  / {
     macros {
         kana: kana {
             compatible = "zmk,behavior-macro";
@@ -46,7 +45,6 @@
                 ;
         };
     };
-  };
 
     keymap {
       compatible = "zmk,keymap";
