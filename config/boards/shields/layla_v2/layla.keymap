@@ -34,6 +34,20 @@
         #include "behaviors_mod_morph.dtsi"
     };
 
+  / {
+    macros {
+        kana: kana {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings
+                = <&macro_press &kp LALT>
+                , <&macro_tap &kp GRAVE>
+                , <&macro_release &kp LALT>
+                ;
+        };
+    };
+  };
+
     keymap {
       compatible = "zmk,keymap";
     // ┌───┬───┬───┬───┬───┬───┐                      ┌───┬───┬───┬───┬───┬───┐
@@ -46,7 +60,7 @@
     // │Ctl│ Z │ X │ C │ V │ B │ │   │          │Mut│ │ N │ M │ , │ . │ / │Sft│
     // └───┴───┴───┴───┴───┴───┘ └───┘          └───┘ └───┴───┴───┴───┴───┴───┘
     //     ┌───┬───┬───┐                                      ┌───┬───┬───┐
-    //     │   │GUI│Spc├───┬───┐                      ┌───┬───┤Ent│GUI│   │
+    //     │GUI│Kan│Spc├───┬───┐                      ┌───┬───┤Ent│   │GUI│
     //     └───┴───┴───┤Low│Alt│                      │Alt│Hgh├───┴───┴───┘
     //                 └───┴───┘                      └───┴───┘ 
     // 
@@ -56,7 +70,7 @@
     &kp TAB      &kp Q     &kp W     &kp E     &kp R     &kp T                             &kp Y     &kp U     &kp I     &kp O     &kp P     &kp BSPC
     &kp LSHFT    &kp A     &kp S     &kp D     &kp F     &kp G                             &kp H     &kp J     &kp K     &kp L     &kp SEMI  &kp SQT
     &kp LCTRL    &kp Z     &kp X     &kp C     &kp V     &kp B    &kp C_MUTE    &kp C_MUTE &kp N     &kp M     &kp COMMA &kp DOT   &kp FSLH  &kp RSHFT
-            &none          &kp LGUI  &kp SPACE &mo LOW   &kp LALT                          &kp RALT  &mo HIGH  &kp ENTER &kp RGUI  &soft_off
+                &kp LGUI  &kana     &kp SPACE &mo LOW   &kp LALT                          &kp RALT  &mo HIGH  &kp ENTER &kp RGUI　&soft_off
           >;
 
           sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp C_VOL_UP C_VOL_DN>;
@@ -68,7 +82,7 @@
     &kp TAB      &kp JP_Q    &kp JP_W    &kp JP_E    &kp JP_R    &kp JP_T                           &kp JP_Y    &kp JP_U    &kp JP_I    &kp JP_O    &kp JP_P    &kp BSPC
     &kp LSHFT    &kp JP_A    &kp JP_S    &kp JP_D    &kp JP_F    &kp JP_G                           &kp JP_H    &kp JP_J    &kp JP_K    &kp JP_L    &jp_semi    &jp_sqt
     &kp LCTRL    &kp JP_Z    &kp JP_X    &kp JP_C    &kp JP_V    &kp JP_B  &kp C_MUTE    &kp C_MUTE &kp JP_N    &kp JP_M    &kp JP_COMM &kp JP_DOT  &kp JP_SLSH &kp RSHFT
-              &kp JP_ZKHK    &kp LGUI    &kp SPACE   &mo JLOW    &kp LALT                           &kp RALT    &mo JHIGH   &kp ENTER   &kp RGUI    &soft_off
+                &kp LGUI    &kp JP_ZKHK &kp SPACE   &mo JLOW    &kp LALT                           &kp RALT    &mo JHIGH   &kp ENTER   &kp RGUI    &soft_off
           >;
 
           sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp C_VOL_UP C_VOL_DN>;
@@ -84,7 +98,7 @@
     // │Ctl│ [ │ ! │ @ │ # │ ] │ │   │          │Mut│ │ 0 │ 1 │ 2 │ 3 │ + │Sft│
     // └───┴───┴───┴───┴───┴───┘ └───┘          └───┘ └───┴───┴───┴───┴───┴───┘
     //     ┌───┬───┬───┐                                      ┌───┬───┬───┐
-    //     │   │GUI│Spc├───┬───┐                      ┌───┬───┤Ent│GUI│   │
+    //     │GUI│Kan│Spc├───┬───┐                      ┌───┬───┤Ent│   │GUI│
     //     └───┴───┴───┤Low│Alt│                      │Alt│Hgh├───┴───┴───┘
     //                 └───┴───┘                      └───┴───┘
         high_layer {
@@ -115,19 +129,19 @@
     // ├───┼───┼───┼───┼───┼───┤                      ├───┼───┼───┼───┼───┼───┤
     // │Tab│   │Ins│ ↑ │Prs│   │                      │   │   │PUp│   │   │Del│
     // ├───┼───┼───┼───┼───┼───┤                      ├───┼───┼───┼───┼───┼───┤
-    // │Sft│Cap│ ← │ ↓ │ → │   │                      │   │Hom│PDn│End│   │   │
+    // │Cap│   │ ← │ ↓ │ → │   │                      │   │Hom│PDn│End│   │   │
     // ├───┼───┼───┼───┼───┼───┤ ┌───┐          ┌───┐ ├───┼───┼───┼───┼───┼───┤
     // │Ctl│   │   │   │   │   │ │   │          │Mut│ │   │   │   │   │   │Sft│
     // └───┴───┴───┴───┴───┴───┘ └───┘          └───┘ └───┴───┴───┴───┴───┴───┘
     //     ┌───┬───┬───┐                                      ┌───┬───┬───┐
-    //     │   │GUI│Spc├───┬───┐                      ┌───┬───┤Ent│GUI│   │
+    //     │GUI│Kan│Spc├───┬───┐                      ┌───┬───┤Ent│   │GUI│
     //     └───┴───┴───┤Low│Alt│                      │Alt│Hgh├───┴───┴───┘
     //                 └───┴───┘                      └───┴───┘
         low_layer {
           bindings = <
     &trans      &trans       &trans       &trans       &trans       &trans                     &trans       &trans       &trans       &trans       &trans    &trans
     &trans      &none        &kp INS      &kp UP       &kp PSCRN    &none                      &none        &none        &kp PG_UP    &none        &none     &kp DEL
-    &trans      &kp CAPS     &kp LEFT     &kp DOWN     &kp RIGHT    &none                      &none        &kp HOME     &kp PG_DN    &kp END      &none     &none
+    &kp CAPS    &none        &kp LEFT     &kp DOWN     &kp RIGHT    &none                      &none        &kp HOME     &kp PG_DN    &kp END      &none     &none
     &trans      &none        &none        &none        &none        &none  &none       &trans  &none        &none        &none        &none        &none     &trans
                 &trans       &trans       &trans       &trans       &trans                     &trans       &trans       &trans       &trans       &trans
           >;
@@ -138,7 +152,7 @@
           bindings = <
     &trans      &trans       &trans       &trans       &trans       &trans                     &trans       &trans       &trans       &trans       &trans    &trans
     &trans      &none        &kp INS      &kp UP       &kp PSCRN    &none                      &none        &none        &kp PG_UP    &none        &none     &kp DEL
-    &trans      &kp CAPS     &kp LEFT     &kp DOWN     &kp RIGHT    &none                      &none        &kp HOME     &kp PG_DN    &kp END      &none     &none
+    &kp CAPS    &none        &kp LEFT     &kp DOWN     &kp RIGHT    &none                      &none        &kp HOME     &kp PG_DN    &kp END      &none     &none
     &trans      &none        &none        &none        &none        &none  &none       &trans  &none        &none        &none        &none        &none     &trans
                 &trans       &trans       &trans       &trans       &trans                     &trans       &trans       &trans       &trans       &trans
           >;
@@ -156,27 +170,27 @@
     // │Num│   │   │   │   │   │ │   │          │Mut│ │   │   │   │   │   │   │
     // └───┴───┴───┴───┴───┴───┘ └───┘          └───┘ └───┴───┴───┴───┴───┴───┘
     //     ┌───┬───┬───┐                                      ┌───┬───┬───┐
-    //     │   │GUI│Spc├───┬───┐                      ┌───┬───┤Ent│GUI│   │
+    //     │GUI│Kan│Spc├───┬───┐                      ┌───┬───┤Ent│   │GUI│
     //     └───┴───┴───┤Low│Alt│                      │Alt│Hgh├───┴───┴───┘
     //                 └───┴───┘                      └───┴───┘ 
         adj_layer {
           bindings = <
-    &sys_reset  &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3 &bt BT_SEL 4                     &none        &none        &none        &none        &none     &sys_reset
-    &bootloader &bt BT_CLR   &none        &none        &none        &none                            &none        &kp C_VOL_DN &kp C_MUTE   &kp C_VOL_UP &none     &bootloader
-   &to JDEFAULT &none        &none        &none        &none        &none                            &none        &kp C_PREV   &kp C_PP     &kp C_NEXT   &none     &none
-    &kp LNLCK   &none        &none        &none        &none        &none        &none       &trans  &none        &none        &none        &none        &none     &none
-                &trans       &trans       &trans       &trans       &trans                           &trans       &trans       &trans       &trans       &trans
+    &sys_reset     &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3 &bt BT_SEL 4                     &none        &none        &none        &none        &none     &sys_reset
+    &bootloader    &bt BT_CLR   &none        &none        &none        &none                            &none        &kp C_VOL_DN &kp C_MUTE   &kp C_VOL_UP &none     &bootloader
+    &to JDEFAULT   &none        &none        &none        &none        &none                            &none        &kp C_PREV   &kp C_PP     &kp C_NEXT   &none     &none
+    &kp KP_NUMLOCK &none        &none        &none        &none        &none        &none       &trans  &none        &none        &none        &none        &none     &none
+                  &trans       &trans       &trans       &trans       &trans                           &trans       &trans       &trans       &trans       &trans
           >;
 
           sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp C_VOL_UP C_VOL_DN>;
         };
         jis_adj_layer {
           bindings = <
-    &sys_reset  &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3 &bt BT_SEL 4                     &none        &none        &none        &none        &none     &sys_reset
-    &bootloader &bt BT_CLR   &none        &none        &none        &none                            &none        &kp C_VOL_DN &kp C_MUTE   &kp C_VOL_UP &none     &bootloader
-    &to DEFAULT &none        &none        &none        &none        &none                            &none        &kp C_PREV   &kp C_PP     &kp C_NEXT   &none     &none
-    &kp LNLCK   &none        &none        &none        &none        &none        &none       &trans  &none        &none        &none        &none        &none     &none
-                &trans       &trans       &trans       &trans       &trans                           &trans       &trans       &trans       &trans       &trans
+    &sys_reset     &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3 &bt BT_SEL 4                     &none        &none        &none        &none        &none     &sys_reset
+    &bootloader    &bt BT_CLR   &none        &none        &none        &none                            &none        &kp C_VOL_DN &kp C_MUTE   &kp C_VOL_UP &none     &bootloader
+    &to DEFAULT    &none        &none        &none        &none        &none                            &none        &kp C_PREV   &kp C_PP     &kp C_NEXT   &none     &none
+    &kp KP_NUMLOCK &none        &none        &none        &none        &none        &none       &trans  &none        &none        &none        &none        &none     &none
+                  &trans       &trans       &trans       &trans       &trans                           &trans       &trans       &trans       &trans       &trans
           >;
 
           sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp C_VOL_UP C_VOL_DN>;
